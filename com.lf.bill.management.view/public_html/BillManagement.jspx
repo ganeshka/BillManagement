@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="BillManagement.jspx" id="d1" binding="#{backingBeanScope.BillManagement.d1}">
+            <af:form id="f1" binding="#{backingBeanScope.BillManagement.f1}">
+                <af:panelSplitter orientation="vertical" splitterPosition="50" id="ps2"
+                                  binding="#{backingBeanScope.BillManagement.ps2}">
+                    <f:facet name="first">
+                        <!--af:image source="#{resource['images:lflogo.gif']}" shortDesc="logo" id="i1"
+                                  binding="#{backingBeanScope.BillManagement.i1}"/-->
+                    </f:facet>
+                    <f:facet name="second">
+                        <af:panelSplitter orientation="vertical" splitterPosition="50" positionedFromEnd="true" id="ps4"
+                                          binding="#{backingBeanScope.BillManagement.ps4}">
+                            <f:facet name="first">
+                                <af:decorativeBox theme="dark" id="db2"
+                                                  binding="#{backingBeanScope.BillManagement.db2}">
+                                    <f:facet name="center">
+                                        <af:decorativeBox theme="medium" id="db3"
+                                                          binding="#{backingBeanScope.BillManagement.db3}">
+                                            <f:facet name="center">
+                                                <af:panelSplitter orientation="horizontal" splitterPosition="153"
+                                                                  id="ps3"
+                                                                  binding="#{backingBeanScope.BillManagement.ps3}">
+                                                    <f:facet name="first">
+                                                        <af:panelGroupLayout layout="horizontal" id="pgl1"
+                                                                             binding="#{backingBeanScope.BillManagement.pgl1}">
+                                                            <af:panelBox text="Your Options" id="pb1"
+                                                                         binding="#{backingBeanScope.BillManagement.pb1}">
+                                                                <f:facet name="toolbar"/>
+                                                                <af:panelFormLayout id="pfl1"
+                                                                                    binding="#{backingBeanScope.BillManagement.pfl1}"
+                                                                                    maxColumns="1" rows="4">
+                                                                    <af:commandLink text="View Biller Details" id="cl2"
+                                                                                    binding="#{backingBeanScope.BillManagement.cl2}"
+                                                                                    actionListener="#{backingBeanScope.BillManagement.viewBillerDetails}"/>
+                                                                    <af:commandLink text="Biller Onboarding" id="cl1"
+                                                                                    binding="#{backingBeanScope.BillManagement.cl1}"
+                                                                                    actionListener="#{backingBeanScope.BillManagement.onBoardBiller}"/>
+                                                                    <af:commandLink text="Bill Payment" id="cl3"
+                                                                                    binding="#{backingBeanScope.BillManagement.cl3}"
+                                                                                    actionListener="#{backingBeanScope.BillManagement.billPaymentClicked}"/>
+                                                                    <af:commandLink text="View Historical Payments"
+                                                                                    id="cl4"
+                                                                                    binding="#{backingBeanScope.BillManagement.cl4}"
+                                                                                    actionListener="#{backingBeanScope.BillManagement.fetchHistPayments}"/>
+                                                                    <af:commandLink text="Clear" id="cl5"
+                                                                                    binding="#{backingBeanScope.BillManagement.cl5}"
+                                                                                    actionListener="#{backingBeanScope.BillManagement.reset}"/>
+                                                                    <!--af:commandButton text="Biller Onboarding" id="cb1"
+                                                                                      binding="#{backingBeanScope.BillManagement.cb1}"
+                                                                                      actionListener="#{backingBeanScope.BillManagement.onBoardBiller}"
+                                                                                      useWindow="true"/>
+                                                                    <af:commandButton text="View Biller Details"
+                                                                                      id="cb2"
+                                                                                      binding="#{backingBeanScope.BillManagement.cb2}"
+                                                                                      actionListener="#{backingBeanScope.BillManagement.viewBillerDetails}"/>
+                                                                    <af:commandButton text="Bill Payment" id="cb3"
+                                                                                      binding="#{backingBeanScope.BillManagement.cb3}"
+                                                                                      actionListener="#{backingBeanScope.BillManagement.billPaymentClicked}"/>
+                                                                    <af:commandButton text="View Historical Payments"
+                                                                                      id="cb4"
+                                                                                      binding="#{backingBeanScope.BillManagement.cb4}"
+                                                                                      actionListener="#{backingBeanScope.BillManagement.fetchHistPayments}"/>
+                                                                    <af:commandButton text="Clear" id="cb5"
+                                                                                      binding="#{backingBeanScope.BillManagement.cb5}"
+                                                                                      actionListener="#{backingBeanScope.BillManagement.reset}"/-->
+                                                                </af:panelFormLayout>
+                                                            </af:panelBox>
+                                                        </af:panelGroupLayout>
+                                                    </f:facet>
+                                                    <f:facet name="second">
+                                                        <af:panelSplitter orientation="horizontal"
+                                                                          splitterPosition="169"
+                                                                          positionedFromEnd="true" id="ps1"
+                                                                          binding="#{backingBeanScope.BillManagement.ps1}">
+                                                            <f:facet name="first">
+                                                                <af:decorativeBox theme="default" id="db1"
+                                                                                  binding="#{backingBeanScope.BillManagement.db1}">
+                                                                    <f:facet name="center">
+                                                                        <af:panelGroupLayout layout="scroll" id="pgl3"
+                                                                                             binding="#{backingBeanScope.BillManagement.pgl3}">
+                                                                            <af:region value="#{bindings.billeradditiontaskflowdefinition1.regionModel}"
+                                                                                       id="r1"
+                                                                                       binding="#{backingBeanScope.BillManagement.r1}"
+                                                                                       rendered="false"/>
+                                                                            <af:region value="#{bindings.billertaskflowdefinition1.regionModel}"
+                                                                                       id="r2"
+                                                                                       binding="#{backingBeanScope.BillManagement.r2}"
+                                                                                       rendered="false"/>
+                                                                            <af:region value="#{bindings.billerdetailstaskflowdefinition1.regionModel}"
+                                                                                       id="r3"
+                                                                                       binding="#{backingBeanScope.BillManagement.r3}"/>
+                                                                            <af:region value="#{bindings.billtaskflowdefinition1.regionModel}"
+                                                                                       id="r4" rendered="false"
+                                                                                       binding="#{backingBeanScope.BillManagement.r4}"/>
+                                                                            <af:region value="#{bindings.billpaytaskflowdefinition1.regionModel}"
+                                                                                       id="r5" rendered="false"
+                                                                                       binding="#{backingBeanScope.BillManagement.r5}"/>
+                                                                        </af:panelGroupLayout>
+                                                                    </f:facet>
+                                                                </af:decorativeBox>
+                                                            </f:facet>
+                                                            <f:facet name="second">
+                                                                <af:panelGroupLayout layout="scroll" id="pgl2"
+                                                                                     binding="#{backingBeanScope.BillManagement.pgl2}">
+                                                                    <af:outputText value="About Us " id="ot3"
+                                                                                   binding="#{backingBeanScope.BillManagement.ot3}"
+                                                                                   inlineStyle="font-weight:bolder;"/>
+                                                                    <af:spacer width="10" height="10" id="s1"
+                                                                               binding="#{backingBeanScope.BillManagement.s1}"/>
+                                                                    <af:outputText value="LevelFive Solutions specializes in the delivery of customsoftware projects with emphasis on you and your customers. We understandthe fine line that separates what you want from what you need, and will involveyou closely in every step of the development process to ensure that things workthe way they should."
+                                                                                   id="ot2"
+                                                                                   binding="#{backingBeanScope.BillManagement.ot2}"/>
+                                                                </af:panelGroupLayout>
+                                                            </f:facet>
+                                                        </af:panelSplitter>
+                                                    </f:facet>
+                                                </af:panelSplitter>
+                                            </f:facet>
+                                        </af:decorativeBox>
+                                    </f:facet>
+                                </af:decorativeBox>
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:outputText value="© 2013 LevelFIVE Solutions. All rights reserved." id="ot1"
+                                               binding="#{backingBeanScope.BillManagement.ot1}" noWrap="false"
+                                               inlineStyle="text-align:center; color:Blue;"/>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </f:facet>
+                </af:panelSplitter>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:BillManagement-->
+</jsp:root>

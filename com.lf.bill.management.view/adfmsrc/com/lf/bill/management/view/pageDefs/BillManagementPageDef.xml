@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="BillManagementPageDef"
+                Package="com.lf.bill.management.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="billeradditiontaskflowdefinition1"
+              taskFlowId="/billeraddition-task-flow-definition.xml#billeraddition-task-flow-definition"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="billertaskflowdefinition1" taskFlowId="/biller-task-flow-definition.xml#biller-task-flow-definition"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="BillerVO1" RangeSize="10" DataControl="BillManagementAppModuleDataControl" id="BillerVO1Iterator"/>
+    <taskFlow id="billtaskflowdefinition1" taskFlowId="/bill-task-flow-definition.xml#bill-task-flow-definition"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="billpaytaskflowdefinition1"
+              taskFlowId="/billpay-task-flow-definition.xml#billpay-task-flow-definition" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="BillVO1" RangeSize="10" DataControl="BillManagementAppModuleDataControl" id="BillVO1Iterator"/>
+    <taskFlow id="billerdetailstaskflowdefinition1"
+              taskFlowId="/billerdetails-task-flow-definition.xml#billerdetails-task-flow-definition"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="BillerVO1Iterator" id="billerId">
+      <AttrNames>
+        <Item Value="billerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="transactionId">
+      <AttrNames>
+        <Item Value="transactionId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="biller-task-flow-definition">
+    <default-activity>Biller</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>Biller</managed-bean-name>
+      <managed-bean-class>com.lf.bill.management.view.backing.biller.Biller</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1Biller.jsff-->
+    </managed-bean>
+    <view id="Biller">
+      <page>/Biller.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

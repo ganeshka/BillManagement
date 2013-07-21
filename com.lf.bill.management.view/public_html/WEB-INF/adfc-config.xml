@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="BillManagement">
+    <page>/BillManagement.jspx</page>
+  </view>
+  <managed-bean id="__1">
+    <managed-bean-name>BillManagement</managed-bean-name>
+    <managed-bean-class>com.lf.bill.management.view.backing.BillManagement</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1BillManagement.jspx-->
+  </managed-bean>
+</adfc-config>

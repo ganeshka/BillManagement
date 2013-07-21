@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="BillPageDef"
+                Package="com.lf.bill.management.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="BillVO1" RangeSize="10" DataControl="BillManagementAppModuleDataControl" id="BillVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="BillVO1Iterator" id="transactionId">
+      <AttrNames>
+        <Item Value="transactionId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="billerId">
+      <AttrNames>
+        <Item Value="billerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="custRefNo">
+      <AttrNames>
+        <Item Value="custRefNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="amount">
+      <AttrNames>
+        <Item Value="amount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="modeOfPayment">
+      <AttrNames>
+        <Item Value="modeOfPayment"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="isTransactionIdRendered">
+      <AttrNames>
+        <Item Value="isTransactionIdRendered"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="isTransactionIdReadonly">
+      <AttrNames>
+        <Item Value="isTransactionIdReadonly"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="isBillerIdReadonly">
+      <AttrNames>
+        <Item Value="isBillerIdReadonly"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="isCustRefNoReadonly">
+      <AttrNames>
+        <Item Value="isCustRefNoReadonly"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="isModeOfPaymentReadonly">
+      <AttrNames>
+        <Item Value="isModeOfPaymentReadonly"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="BillVO1Iterator" id="isAmountReadonly">
+      <AttrNames>
+        <Item Value="isAmountReadonly"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

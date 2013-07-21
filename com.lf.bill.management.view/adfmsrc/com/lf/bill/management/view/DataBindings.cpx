@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.lf.bill.management.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Biller.jsff" usageId="com_lf_bill_management_view_BillerPageDef"/>
+    <page path="/BillerAddition.jsff" usageId="com_lf_bill_management_view_BillerAdditionPageDef"/>
+    <page path="/BillManagement.jspx" usageId="com_lf_bill_management_view_BillManagementPageDef"/>
+    <page path="/BillerDetails.jsff" usageId="com_lf_bill_management_view_BillerDetailsPageDef"/>
+    <page path="/Bill.jsff" usageId="com_lf_bill_management_view_BillPageDef"/>
+    <page path="/BillPay.jsff" usageId="com_lf_bill_management_view_BillPayPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_lf_bill_management_view_BillerPageDef" path="com.lf.bill.management.view.pageDefs.BillerPageDef"/>
+    <page id="com_lf_bill_management_view_BillerAdditionPageDef"
+          path="com.lf.bill.management.view.pageDefs.BillerAdditionPageDef"/>
+    <page id="com_lf_bill_management_view_BillManagementPageDef"
+          path="com.lf.bill.management.view.pageDefs.BillManagementPageDef"/>
+    <page id="com_lf_bill_management_view_BillerDetailsPageDef"
+          path="com.lf.bill.management.view.pageDefs.BillerDetailsPageDef"/>
+    <page id="com_lf_bill_management_view_BillPageDef" path="com.lf.bill.management.view.pageDefs.BillPageDef"/>
+    <page id="com_lf_bill_management_view_BillPayPageDef" path="com.lf.bill.management.view.pageDefs.BillPayPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="BillManagementAppModuleDataControl" Package="com.lf.bill.management.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="BillManagementAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="billpay-task-flow-definition">
+    <default-activity>BillPay</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>BillPay</managed-bean-name>
+      <managed-bean-class>com.lf.bill.management.view.backing.BillPay</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1BillPay.jsff-->
+    </managed-bean>
+    <view id="BillPay">
+      <page>/BillPay.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

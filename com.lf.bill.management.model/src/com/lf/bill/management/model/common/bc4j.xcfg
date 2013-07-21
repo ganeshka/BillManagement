@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.lf.bill.management.model.BillManagementAppModule">
+      <AppModuleConfig name="BillManagementAppModuleLocal" jbo.project="com.lf.bill.management.model.comLfBillManagementModel" ApplicationName="com.lf.bill.management.model.BillManagementAppModule" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="com.lf.bill.management.model.BillManagementAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/C##BILLDATADS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="BillManagementAppModuleShared" jbo.project="com.lf.bill.management.model.comLfBillManagementModel" ApplicationName="com.lf.bill.management.model.BillManagementAppModule" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="com.lf.bill.management.model.BillManagementAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/C##BILLDATADS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="BillerAdditionPageDef"
+                Package="com.lf.bill.management.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="billertaskflowdefinition1" taskFlowId="/biller-task-flow-definition.xml#biller-task-flow-definition"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="BillerVO1" RangeSize="10" DataControl="BillManagementAppModuleDataControl" id="BillerVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="BillerVO1Iterator" id="billerId">
+      <AttrNames>
+        <Item Value="billerId"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

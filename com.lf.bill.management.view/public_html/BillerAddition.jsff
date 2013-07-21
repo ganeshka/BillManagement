@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGroupLayout id="pgl1" binding="#{pageFlowScope.BillerAddition.pgl1}">
+        <af:panelBox text="Biller Addition" id="pb1" binding="#{pageFlowScope.BillerAddition.pb1}">
+            <f:facet name="toolbar"/>
+            <af:region value="#{bindings.billertaskflowdefinition1.regionModel}" id="r1"
+                       binding="#{pageFlowScope.BillerAddition.r1}"/>
+            <af:commandButton text="Click here to create this biller in the system" id="cb1" binding="#{pageFlowScope.BillerAddition.cb1}"
+                              actionListener="#{pageFlowScope.BillerAddition.createBiller}"/>
+        </af:panelBox>
+    </af:panelGroupLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:BillerAddition-->
+</jsp:root>

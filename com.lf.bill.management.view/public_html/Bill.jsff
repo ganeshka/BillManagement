@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGroupLayout id="pgl1" binding="#{pageFlowScope.Bill.pgl1}">
+        <af:panelBox text="Bill" id="pb1" binding="#{pageFlowScope.Bill.pb1}">
+            <f:facet name="toolbar"/>
+            <af:panelFormLayout id="pfl1" binding="#{pageFlowScope.Bill.pfl1}">
+                <f:facet name="footer"/>
+                <af:inputText label="Transaction Reference Number" id="it1" binding="#{pageFlowScope.Bill.it1}"
+                              value="#{bindings.transactionId.inputValue}"
+                              rendered="#{bindings.isTransactionIdRendered.inputValue}"
+                              readOnly="#{bindings.isTransactionIdReadonly.inputValue}"/>
+                <af:inputText label="Biller Id" id="it2" binding="#{pageFlowScope.Bill.it2}"
+                              value="#{bindings.billerId.inputValue}"
+                              readOnly="#{bindings.isBillerIdReadonly.inputValue}"/>
+                <af:inputText label="Customer Reference Number" id="it3" binding="#{pageFlowScope.Bill.it3}"
+                              value="#{bindings.custRefNo.inputValue}"
+                              readOnly="#{bindings.isCustRefNoReadonly.inputValue}"/>
+                <af:inputText label="Amount" id="it4" binding="#{pageFlowScope.Bill.it4}"
+                              value="#{bindings.amount.inputValue}" readOnly="#{bindings.isAmountReadonly.inputValue}"/>
+                <af:inputText label="Mode of Payment" id="it5" binding="#{pageFlowScope.Bill.it5}"
+                              value="#{bindings.modeOfPayment.inputValue}"
+                              readOnly="#{bindings.isModeOfPaymentReadonly.inputValue}"/>
+            </af:panelFormLayout>
+        </af:panelBox>
+    </af:panelGroupLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:Bill-->
+</jsp:root>

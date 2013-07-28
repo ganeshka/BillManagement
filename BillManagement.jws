@@ -27,6 +27,7 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="Client/Client.jpr"/></hash>
       <hash><url n="URL" path="com.lf.bill.management.model/com.lf.bill.management.model.jpr"/></hash>
       <hash><url n="URL" path="com.lf.bill.management.view/com.lf.bill.management.view.jpr"/></hash>
    </list>
@@ -45,8 +46,8 @@
                   </hash>
                </list>
             </hash>
-            <url n="earURL" path="deploy/BillManagement_Project1_BillManagement.ear"/>
-            <value n="enterpriseAppName" v="BillManagement_Project1_BillManagement"/>
+            <url n="earURL" path="deploy/BillManagement.ear"/>
+            <value n="enterpriseAppName" v="BillManagement"/>
             <hash n="fileGroups">
                <list n="groups">
                   <hash>
@@ -90,5 +91,15 @@
       <list n="profileList">
          <string v="BillManagement_Project1_BillManagement"/>
       </list>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="ApplicationSrcContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
    </hash>
 </jws:workspace>

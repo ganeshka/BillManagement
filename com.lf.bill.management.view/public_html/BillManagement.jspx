@@ -5,11 +5,11 @@
     <f:view>
         <af:document title="BillManagement.jspx" id="d1" binding="#{backingBeanScope.BillManagement.d1}">
             <af:form id="f1" binding="#{backingBeanScope.BillManagement.f1}">
-                <af:panelSplitter orientation="vertical" splitterPosition="50" id="ps2"
+                <af:panelSplitter orientation="vertical" splitterPosition="100" id="ps2"
                                   binding="#{backingBeanScope.BillManagement.ps2}">
                     <f:facet name="first">
-                        <!--af:image source="#{resource['images:lflogo.gif']}" shortDesc="logo" id="i1"
-                                  binding="#{backingBeanScope.BillManagement.i1}"/-->
+                        <af:image source="#{resource['images:LevelFive_Logo_Final1.png']}" shortDesc="logo" id="i1"
+                                  binding="#{backingBeanScope.BillManagement.i1}" inlineStyle="vertical-align:top;"/>
                     </f:facet>
                     <f:facet name="second">
                         <af:panelSplitter orientation="vertical" splitterPosition="50" positionedFromEnd="true" id="ps4"
@@ -125,7 +125,7 @@
                                 </af:decorativeBox>
                             </f:facet>
                             <f:facet name="second">
-                                <af:outputText value="© 2013 LevelFIVE Solutions. All rights reserved." id="ot1"
+                                <af:outputText value="&#169; 2013 LevelFIVE Solutions. All rights reserved." id="ot1"
                                                binding="#{backingBeanScope.BillManagement.ot1}" noWrap="false"
                                                inlineStyle="text-align:center; color:Blue;"/>
                             </f:facet>

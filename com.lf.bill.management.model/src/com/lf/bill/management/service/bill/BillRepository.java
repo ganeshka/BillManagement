@@ -7,14 +7,21 @@ import com.lf.bill.management.model.db.utils.DatabaseUtils;
 import java.math.BigDecimal;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import java.util.Calendar;
-
 
 public class BillRepository {
+
+    private static BillRepository rep;
+
+    public static BillRepository getInstance() {
+        if (rep == null) {
+            rep = new BillRepository();
+        }
+        return rep;
+    }
+
     public BillRepository() {
         super();
     }
@@ -96,7 +103,7 @@ public class BillRepository {
     public static void main(String[] args) {
         BillRepository rep = new BillRepository();
         Bill bill = new Bill();
-        
+
         String transactionId = Long.toString(System.currentTimeMillis());
         bill.setTransactionId(transactionId);
         bill.setAmount(new BigDecimal(100));

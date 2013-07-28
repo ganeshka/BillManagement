@@ -126,6 +126,11 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+    <servlet-name>BillerManagementServicePort</servlet-name>
+    <servlet-class>com.lf.bill.management.view.backing.BillerManagementService</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>/faces/*</url-pattern>
@@ -157,6 +162,10 @@
   <servlet-mapping>
     <servlet-name>adfAuthentication</servlet-name>
     <url-pattern>/adfAuthentication</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BillerManagementServicePort</servlet-name>
+    <url-pattern>/BillerManagementServicePort</url-pattern>
   </servlet-mapping>
   <mime-mapping>
     <extension>swf</extension>

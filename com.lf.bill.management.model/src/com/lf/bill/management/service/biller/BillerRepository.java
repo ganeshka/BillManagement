@@ -9,6 +9,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class BillerRepository {
+
+    private static BillerRepository rep;
+
+    public static BillerRepository getInstance() {
+        if (rep == null) {
+            rep = new BillerRepository();
+        }
+        return rep;
+    }
+
     public BillerRepository() {
         super();
     }
@@ -28,8 +38,8 @@ public class BillerRepository {
         String billerName = biller.getName();
         String billerDesc = biller.getDesc();
         String query =
-            "update biller set billerName = '" + billerName + "', billerDesc = '" + billerDesc + "' where billerid = '" +
-            billerId + "'";
+            "update biller set billerName = '" + billerName + "', billerDesc = '" + billerDesc +
+            "' where billerid = '" + billerId + "'";
         utils.executeUpdate(query);
     }
 
